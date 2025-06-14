@@ -69,7 +69,7 @@ LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:=	-lEngineGame -lspirv-cross-core -lshaderc_combined -lvulkan -lxcb -lasound -lBullet -lpthread -lm
+LIBS	:=	-lEngineGame -lspirv-cross-core -lSPIRV-Tools -lSPIRV-Tools-opt -lglslang -lshaderc_combined -lvulkan -lxcb -lasound -lBullet -lpthread -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -116,7 +116,8 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
 #---------------------------------------------------------------------------------
 # build a list of library paths
 #---------------------------------------------------------------------------------
-export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
+export LIBPATHS	:=	-L$(CURDIR)/../External/SPIRV-Cross/build \
+					$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
 					-L$(CURDIR)/../External/Bullet/Build/Linux \
 					-L$(CURDIR)/../Engine/Build/Linux
 
