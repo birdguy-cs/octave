@@ -49,11 +49,12 @@ Instructions for building from source below.
     - sudo dkp-pacman -S wii-dev
     - sudo dkp-pacman -S 3ds-dev
 8. Run Engine/Shaders/GLSL/compile.sh
+9. Make External/SPIRV-Cross/build
 
 ### Linux Setup (Visual Studio Code)
-9. Open the root octave folder in VsCode (where this README is located).
-10. Install the C/C++ Extension Pack
-11. Run the Octave Editor config (click the Run and Debug tab on the left, then in the drop down where the green Play button is, select `Octave Editor`)
+10. Open the root octave folder in VsCode (where this README is located).
+11. Install the C/C++ Extension Pack
+12. Run the Octave Editor config (click the Run and Debug tab on the left, then in the drop down where the green Play button is, select `Octave Editor`)
 
 ### Linux Setup (Terminal)
 9. From the project's root directory (where this README is located) `cd Standalone`
